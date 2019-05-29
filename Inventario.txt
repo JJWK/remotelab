@@ -1,0 +1,235 @@
+Código: [Seleccionar]
+# -- coding: cp1252 --
+import os, math
+os.system('color 0a ')
+
+
+def head(): 
+	print "\n\n-- == Inventario 0.2 == --\n\n"
+
+def clean():
+	os.system("cls")
+
+def programa():
+    print "Bienvenido(A)", "\n"*4, "[1] Bebidas\n[2] Comida\n[3] Materiales"
+    op = input("Seleccione una opción: ")
+    if op == 1:
+        bebidas()
+    elif op == 2:
+        comida()
+    elif op == 3:
+        materiales()
+    else:
+        print "[!]Error."
+        input()
+
+######################################## BEBIDAS ########################################
+    
+def bebidas():
+    print "[1] Pepsis\n[2] Goldens\n[3] Maltas"
+    op = input("Seleccione una bebida: ")
+    if op == 1:
+        pepsis()
+    elif op == 2:
+        goldens()
+    elif op == 3:
+        maltas()
+    else:
+        print "[!]Error."
+        input()
+
+# PEPSIS
+def pepsis():
+    print "[1] Pepsis compradas\n[2] Pepsis vendidas\n[3] Calculadora de pepsis"
+    op = input("Seleccione una opción: ")
+    if op == 1:
+        pepsisCompradas()
+    elif op == 2:
+        pepsisVendidas()
+    elif op == 3:
+        pepsisCalc()
+    else:
+        print "[!]Error."
+        input()
+
+### Compradas
+def pepsisCompradas():
+    print "[1] Nuevas pepsis\n[2] Pepsis en stock"
+    op = input("Seleccione una opción: ")
+    if op == 1:
+        nuevasPepsis()
+    elif op == 2:
+        os.system('start pepsiscompradas.txt')
+    else:
+        print "[!]Error."
+        input
+
+def nuevasPepsis():
+    print "Ingrese la cantidad de pepsis compradas y la fecha de ingreso\n\n"
+    pepsis = raw_input('Pepsis compradas: ')
+    pepsisCompradas = open( 'pepsiscompradas.txt', 'at+')
+    pepsisCompradas.writelines("Pepsis compradas: %s\n" % (pepsis))
+    print "Nuevas pepsis en stock"
+    input()
+
+### Vendidas
+def pepsisVendidas():
+    print "[1] Nuevas pepsis vendidas\n[2] Total de pepsis vendidas"
+    op = input("Seleccione una opcion: ")
+    if op == 1:
+        nuevasPepsisVendidas()
+    elif op == 2:
+        os.system(' start pepsisvendidas.txt ')
+        input()
+    else:
+        print "[!]Error."
+        input()
+
+def nuevasPepsisVendidas():
+    print "Ingrese cantidad de pepsis y fecha de egreso\n\n"
+    pepsis = raw_input('Nuevas pepsis vendidas: ')
+    pepsisVendidas= open( 'pepsisvendidas.txt', 'at+')
+    pepsisVendidas.writelines( "Pepsis vendidas: %s\n" % (pepsis))
+    print "Egresos actualizados"
+    input()
+
+### Calculadora					
+def pepsisCalc():
+    precioPepsis = 70
+    pepsis = input('Ingrese la cantidad de pepsis: ')   # Acá tenés que usar "input" (tipo 'int') 
+    resultado = pepsis * precioPepsis                   # en vez de "raw_input" (tipo 'str')
+    print "El valor es Bsf", resultado                  # para que se pueda realizar la multiplicación.
+    input()
+
+# GOLDENS
+def goldens():
+    print "[1] Goldens compradas\n[2] Goldens vendidas\n[3] Calculadora goldens"
+    op = input("Seleccione una opcion: ")
+    if op == 1:
+        goldensCompradas()
+    elif op == 2:
+        goldensVendidas()
+    elif op == 3:
+        goldensCalc()
+
+### Compradas
+def goldensCompradas():
+    print "[1] Nuevas goldens\n[2] Goldens en stock"
+    op = input("Seleccione una opcion: ")
+    if op == 1:
+        nuevasGoldens()
+    elif op == 2:
+        os.system('start goldenscompradas.txt ')
+        input()
+    else:
+        print "[!] Error."
+        input()
+
+def nuevasGoldens():
+    print "Ingrese la cantidad de goldens compradas y la fecha ingreso\n\n"
+    goldens = raw_input('Goldens compradas: ')
+    goldensCompradas = open('goldenscompradas.txt', 'at+')
+    goldensCompradas.writelines("Goldens compradas: %s\n" % (goldens))
+    print "Nuevas goldens en stock"
+    input()
+
+### Vendidas
+def goldensVendidas():
+    print "[1] Nuevas goldens vendidas\n[2] Total de goldens vendidas"
+    op = input("Seleccione una opcion: ")
+    if op == 1:
+        nuevasGoldensVendidas()
+    elif op == 2:
+        os.system('start goldensvendidas.txt ')
+        input()
+    else:
+        print "[!]Error."
+        input()
+
+def nuevasGoldensVendidas():
+    print "Ingrese la cantidad de goldens vendidas y la fecha de egreso"
+    goldens = raw_input('Nuevas goldens vendidas: ')
+    goldensVendidas = open('goldensvendidas.txt', 'at+')
+    goldensVendidas.writelines( "Goldens vendidas: %s\n" % (goldens))
+    print "Egresos actualizados."
+    input()
+
+### Calculadora						
+def goldensCalc():
+    precioGoldens = 65
+    goldens = input('Ingrese la cantidad de goldens: ') # Lo mismo
+    resultado = goldens * precioGoldens
+    print "El valor es Bsf", resultado
+    input()
+
+# MALTAS
+def maltas():
+    print "[1] Maltas compradas\n[2] Maltas vendidas\n[3] Calculadora maltas"
+    op = input("Seleccione una opción: ")
+    if op == 1:
+        maltasCompradas()
+    elif op == 2:
+        maltasVendidas()
+    elif op == 3:
+        maltasCalc()
+
+### Compradas
+def maltasCompradas():
+    print "[1] Nuevas maltas\n[2] Maltas en stock"
+    op = input("Seleccione una opcion: ")
+    if op == 1:
+        nuevasMaltas()
+    elif op == 2:
+        os.system('start maltascompradas.txt')
+        input()
+    else:
+        print "[!]Error."
+        input()
+
+def nuevasMaltas():
+    print "Ingrese la cantidad de maltas compradas y la fecha de ingreso"
+    maltas = raw_input('Maltas compradas: ')
+    maltasCompradas = open('maltascompradas.txt', 'at+')
+    maltasCompradas.writelines("Maltas compradas: %s\n" % (maltas))
+
+### Vendidas
+def maltasVendidas():
+    print "[1] Nuevas maltas vendidas\n[2] Total de maltas vendidas"
+    op = input("Seleccione una opción: ")
+    if op == 1:
+        nuevasMaltasVendidas()
+    elif op == 2:
+        os.system('start maltasvendidas.txt')
+        input()
+    else:
+        print "[!] Error."
+        input()
+
+def nuevasMaltasVendidas():
+    print "Ingrese la cantidad de maltas vendidas y la fecha de egreso\n\n"
+    maltas = raw_input('Nuevas Maltas vendidas: ')
+    maltasVendidas = open( 'maltasvendidas.txt', 'at+')
+    maltasVendidas.writelines( "Maltas vendidas: %s\n" % (maltas))
+    print "Egresos actualizados"
+
+### Calculadora
+def maltasCalc():
+    precioMaltas = 75
+    maltas = input('Ingrese la cantidad de maltas: ')   # Lo mismo
+    resultado = maltas * precioMaltas
+    print " El valor es Bsf", resultado
+
+######################################## COMIDA ########################################
+
+def comida():
+    pass
+
+######################################## MATERIALES ########################################
+
+def materiales():
+
+    pass
+
+head()
+clean()
+programa()
