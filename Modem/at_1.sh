@@ -34,7 +34,7 @@ sleep 2
 echo -ne 'AT+CCLK?\r' > /dev/ttyUSB0
 sleep 2
 echo -ne 'AT+COPS?\r' > /dev/ttyUSB0
-sleep 2
+#sleep 2
 #echo -ne 'AT+CREG=2\r' > /dev/ttyUSB0
 #sleep 2
 #echo -ne 'AT+CREG?\r' > /dev/ttyUSB0
