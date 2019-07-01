@@ -35,20 +35,20 @@ echo -ne 'AT+CCLK?\r' > /dev/ttyUSB0
 sleep 2
 echo -ne 'AT+COPS?\r' > /dev/ttyUSB0
 sleep 2
-echo -ne 'AT+CREG=2\r' > /dev/ttyUSB0
-sleep 2
-echo -ne 'AT+CREG?\r' > /dev/ttyUSB0
-sleep 2
-echo -ne 'AT+CREG=0\r' > /dev/ttyUSB0
-sleep 2
-echo -ne 'AT+CSQ\r' > /dev/ttyUSB0
-sleep 2
-echo -ne 'AT+UREG?\r' > /dev/ttyUSB0
-sleep 2
-echo -ne 'AT+CGMI?\r' > /dev/ttyUSB0
-sleep 2
-echo -ne 'AT+CREG?\r' > /dev/ttyUSB0
-sleep 2
+#echo -ne 'AT+CREG=2\r' > /dev/ttyUSB0
+#sleep 2
+#echo -ne 'AT+CREG?\r' > /dev/ttyUSB0
+#sleep 2
+#echo -ne 'AT+CREG=0\r' > /dev/ttyUSB0
+#sleep 2
+#echo -ne 'AT+CSQ\r' > /dev/ttyUSB0
+#sleep 2
+#echo -ne 'AT+UREG?\r' > /dev/ttyUSB0
+#sleep 2
+#echo -ne 'AT+CGMI?\r' > /dev/ttyUSB0
+#sleep 2
+#echo -ne 'AT+CREG?\r' > /dev/ttyUSB0
+#sleep 2
 
 
 
